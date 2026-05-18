@@ -1,0 +1,19 @@
+{application, manage_refs, [
+    {description, "Move refs (branches, tags) on a repository (CMD)"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {mod, {manage_refs_app, []}},
+    {applications, [
+        kernel,
+        stdlib,
+        crypto,
+        cowboy,
+        reckon_db,
+        evoq,
+        reckon_evoq,
+        rag
+    ]},
+    {env, []},
+    {modules, []},
+    {licenses, ["Apache-2.0"]}
+]}.

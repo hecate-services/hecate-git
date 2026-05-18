@@ -1,0 +1,42 @@
+{
+  "name": "hecate-git",
+  "display_name": "Git",
+  "version": "0.1.0",
+  "description": "Realm-bound git-over-mesh repository service",
+  "service_type": "container_daemon",
+  "tenancy": "realm",
+  "runs_on": "infrastructure_node",
+  "callback_module": "hecate_git_service",
+  "image": "ghcr.io/hecate-services/hecate-git",
+  "repository": "https://codeberg.org/hecate-services/hecate-git",
+  "license": "Apache-2.0",
+  "depends_on": [
+    "macula-station",
+    "hecate-realm",
+    "hecate-om"
+  ],
+  "capabilities": [
+    "hecate-git.create_repository",
+    "hecate-git.rename_repository",
+    "hecate-git.retire_repository",
+    "hecate-git.advance_ref",
+    "hecate-git.retire_ref",
+    "hecate-git.get_repository_by_id",
+    "hecate-git.get_repository_by_name",
+    "hecate-git.list_repositories_page",
+    "hecate-git.get_ref",
+    "hecate-git.list_refs_for_repo"
+  ],
+  "ports": {
+    "health": 8470
+  },
+  "volumes": {
+    "secrets": "/etc/hecate/secrets/hecate-git",
+    "state":   "/var/lib/hecate-git",
+    "objects": "/bulk0/hecate/hecate-git/repositories",
+    "station_socket": "/run/macula"
+  },
+  "min_realm_version": "0.6.0",
+  "min_station_version": "0.1.0",
+  "min_om_version":     "0.1.0"
+}

@@ -1,0 +1,19 @@
+{application, project_refs, [
+    {description, "Project ref events into the refs read model (PRJ)"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {mod, {project_refs_app, []}},
+    {applications, [
+        kernel,
+        stdlib,
+        crypto,
+        esqlite,
+        reckon_db,
+        evoq,
+        reckon_evoq,
+        rag
+    ]},
+    {env, []},
+    {modules, []},
+    {licenses, ["Apache-2.0"]}
+]}.

@@ -1,0 +1,17 @@
+{application, query_repositories, [
+    {description, "Repository read model (metadata, steward, visibility) (QRY)"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {mod, {query_repositories_app, []}},
+    {applications, [
+        kernel,
+        stdlib,
+        crypto,
+        cowboy,
+        esqlite,
+        rag
+    ]},
+    {env, []},
+    {modules, []},
+    {licenses, ["Apache-2.0"]}
+]}.

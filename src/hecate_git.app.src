@@ -1,0 +1,23 @@
+{application, hecate_git, [
+    {description, "Realm-bound git-over-mesh service daemon"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {mod, {hecate_git_app, []}},
+    {applications, [
+        kernel, stdlib, crypto,
+        cowboy,
+        reckon_db, reckon_gater, evoq, reckon_evoq,
+        esqlite,
+        hecate_om,
+        git,
+        manage_repositories, manage_refs,
+        project_repositories, project_refs,
+        query_repositories, query_refs
+    ]},
+    {env, []},
+    {modules, []},
+    {licenses, ["Apache-2.0"]},
+    {links, [
+        {"Codeberg", "https://codeberg.org/hecate-services/hecate-git"}
+    ]}
+]}.

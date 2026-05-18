@@ -1,0 +1,14 @@
+{application, git, [
+    {description, "Shared root + notation for the hecate-git umbrella"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {mod, {git_app, []}},
+    {applications, [
+        kernel, stdlib, crypto,
+        cowboy, jsx,
+        reckon_db, evoq
+    ]},
+    {env, []},
+    {modules, []},
+    {licenses, ["Apache-2.0"]}
+]}.

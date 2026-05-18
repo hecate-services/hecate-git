@@ -1,0 +1,17 @@
+{application, query_refs, [
+    {description, "Ref read model (per-repository ref → oid map) (QRY)"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {mod, {query_refs_app, []}},
+    {applications, [
+        kernel,
+        stdlib,
+        crypto,
+        cowboy,
+        esqlite,
+        rag
+    ]},
+    {env, []},
+    {modules, []},
+    {licenses, ["Apache-2.0"]}
+]}.
